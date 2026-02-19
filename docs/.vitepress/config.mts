@@ -138,8 +138,7 @@ export default defineConfig({
     lastUpdated: {
       text: 'Last updated at',
       formatOptions: {
-        dateStyle: 'full',
-        timeStyle: 'medium'
+        dateStyle: 'full'
       }
     },
     sidebar: [
