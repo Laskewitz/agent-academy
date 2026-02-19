@@ -135,7 +135,13 @@ export default defineConfig({
       { text: "Commander (Coming Soon)", link: "/commander/" },
       { text: "Special Ops (Coming Soon)", link: "/special-ops/" },
     ],
-
+    lastUpdated: {
+      text: 'Last updated at',
+      formatOptions: {
+        dateStyle: 'full',
+        timeStyle: 'medium'
+      }
+    },
     sidebar: [
       { text: "Home", link: "/" },
       { text: "Our Team", link: "/our-team/" },
