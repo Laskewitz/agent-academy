@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD003 -->
+<!-- markdownlint-disable MD022 -->
 <!-- markdownlint-disable MD033 -->
 <!-- markdownlint-disable MD041 -->
 <script setup>
@@ -45,6 +47,9 @@ const members = [
   }
 ]
 </script>
+---
+lastUpdated: false
+---
 
 # Our Team
 
