@@ -300,7 +300,7 @@ If you have not set up the **Contoso Agent** solution, please head back to [Less
 
 1. Select **Cancel.** Submit the prompt description and Copilot Studio will begin provisioning our agent.
 
-1. Once the agent has been provisioned, you'll see a confirmation appear. Notice how AI automatically generated the name, description and instructions for your agent. The orchestration mode is enabled by default (found in **Settings**) and the default model is used for the response model of the agent.
+1. Once the agent has been provisioned, you'll see a confirmation appear. Notice how AI automatically generated the **name**, **description** and **instructions** for your agent. The orchestration mode is enabled by default (found in **Settings**) and the default model is used for the response model of the agent.
 
     > [!WARNING] Reminder: AI generated instructions may differ across sessions
     >

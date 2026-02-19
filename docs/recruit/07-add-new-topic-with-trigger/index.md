@@ -683,7 +683,7 @@ Let's begin!
 
     ![Edit instructions](assets/7.3_22_EditInstructions.png)
 
-1. Highlight the following instructions and delete them.
+1. Highlight the following instructions underneath the **header** in regard to **device assistance** and delete them.
 
     ![Add instructions](assets/7.3_23_ClearInstructions.png)
 
