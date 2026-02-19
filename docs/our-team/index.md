@@ -1,3 +1,6 @@
+---
+lastUpdated: false
+---
 <!-- markdownlint-disable MD003 -->
 <!-- markdownlint-disable MD022 -->
 <!-- markdownlint-disable MD033 -->
@@ -12,7 +15,8 @@ const members = [
     title: 'Principal Cloud Advocate',
     links: [
       { icon: 'github', link: 'https://github.com/aprildunnam' },
-      { icon: 'twitter', link: 'https://twitter.com/aprildunnam' }
+      { icon: 'twitter', link: 'https://twitter.com/aprildunnam' },
+      { icon: 'linkedin', link: 'https://linkedin.com/in/aprildunnam' }
     ]
   },
   {
@@ -47,9 +51,6 @@ const members = [
   }
 ]
 </script>
----
-lastUpdated: false
----
 
 # Our Team
 
