@@ -1,3 +1,9 @@
+---
+prev:
+  text: 'Power Platform CLI MCP'
+  link: '/special-ops/pac-cli-mcp'
+aside: false
+---
 # 🎯 Power Platform Tenant Governance Strategic Improvement Plan
 
 ## 1. 📊 Current Tenant Configuration Assessment

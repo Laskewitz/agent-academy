@@ -1,7 +1,7 @@
 import express, { Request, Response } from "express";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
-import { z } from "zod";
+import { z } from "zod/v3";
 
 const server = new McpServer({
   name: "mcp-streamable-http",
@@ -9,9 +9,11 @@ const server = new McpServer({
 });
 
 // Get Chuck Norris joke tool
-const getChuckJoke = server.tool(
+const getChuckJoke = server.registerTool(
   "get-chuck-joke",
-  "Get a random Chuck Norris joke",
+  {
+    description: "Get a random Chuck Norris joke",
+  },
   async () => {
     const response = await fetch("https://api.chucknorris.io/jokes/random");
     const data = await response.json();
@@ -27,15 +29,17 @@ const getChuckJoke = server.tool(
 );
 
 // Get Chuck Norris joke by category tool
-const getChuckJokeByCategory = server.tool(
+const getChuckJokeByCategory = server.registerTool(
   "get-chuck-joke-by-category",
-  "Get a random Chuck Norris joke by category",
   {
-    category: z.string().describe("Category of the Chuck Norris joke"),
+    description: "Get a random Chuck Norris joke by category",
+    inputSchema: {
+      category: z.string().describe("Category of the Chuck Norris joke"),
+    },
   },
-  async (params: { category: string }) => {
+  async ({ category }: { category: string }) => {
     const response = await fetch(
-      `https://api.chucknorris.io/jokes/random?category=${params.category}`
+      `https://api.chucknorris.io/jokes/random?category=${category}`
     );
     const data = await response.json();
     return {
@@ -50,9 +54,11 @@ const getChuckJokeByCategory = server.tool(
 );
 
 // Get Chuck Norris joke categories tool
-const getChuckCategories = server.tool(
+const getChuckCategories = server.registerTool(
   "get-chuck-categories",
-  "Get all available categories for Chuck Norris jokes",
+  {
+    description: "Get all available categories for Chuck Norris jokes",
+  },
   async () => {
     const response = await fetch("https://api.chucknorris.io/jokes/categories");
     const data = await response.json();
@@ -68,9 +74,11 @@ const getChuckCategories = server.tool(
 );
 
 // Get Dad joke tool
-const getDadJoke = server.tool(
+const getDadJoke = server.registerTool(
   "get-dad-joke",
-  "Get a random dad joke",
+  {
+    description: "Get a random dad joke",
+  },
   async () => {
     const response = await fetch("https://icanhazdadjoke.com/", {
       headers: {

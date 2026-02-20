@@ -20,7 +20,7 @@ export default defineConfig({
       { text: "Home", link: "/" },
       { text: "Our Team", link: "/our-team/" },
       {
-        text: "Curriculum",
+        text: "Courses",
         items: [
           { text: "Recruit", link: "/recruit/" },
           { text: "Operative", link: "/operative/" },
@@ -28,10 +28,11 @@ export default defineConfig({
         ],
       },
       {
-        text: "Special Ops",
+        text: "Special Ops (labs)",
         items: [
           { text: "Overview", link: "/special-ops/" },
           { text: "MCS ❤️ MCP", link: "/special-ops/mcs-mcp/" },
+          { text: "Power Platform CLI MCP", link: "/special-ops/pac-cli-mcp/" },
         ],
       },
     ],
@@ -45,7 +46,7 @@ export default defineConfig({
       { text: "Home", link: "/" },
       { text: "Our Team", link: "/our-team/" },
       {
-        text: "Curriculum",
+        text: "Courses",
         items: [
           {
             text: "Recruit",
@@ -169,7 +170,7 @@ export default defineConfig({
         ],
       },
       {
-        text: "Special Ops",
+        text: "Special Ops (labs)",
         link: "/special-ops/",
         collapsed: true,
         items: [
