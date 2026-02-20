@@ -73,6 +73,7 @@
     "unconfigured",
     "UPIA",
     "upserts",
+    "USERPROFILE",
     "utcnow",
     "Venv",
     "viewid",
@@ -83,6 +84,7 @@
   "ignorePaths": [
     "node_modules/**",
     ".git/**",
+    ".github/**",
     "*.js",
     "*.css",
     "*.min.js",
