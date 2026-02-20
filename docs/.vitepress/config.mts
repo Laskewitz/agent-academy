@@ -174,6 +174,7 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: "MCS ❤️ MCP", link: "/special-ops/mcs-mcp/" },
+          { text: "Power Platform CLI MCP", link: "/special-ops/pac-cli-mcp/" },
         ],
       },
     ],

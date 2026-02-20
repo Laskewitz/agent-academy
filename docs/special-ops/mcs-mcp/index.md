@@ -3,7 +3,7 @@ tags:
     - MCP
     - Copilot Studio
 ---
-# Special Op: Microsoft Copilot Studio ❤️ MCP
+# Microsoft Copilot Studio ❤️ MCP
 
 Welcome, agent. Your mission — should you choose to accept it — is to deploy an **MCP Server** behind enemy lines and wire it up to **Microsoft Copilot Studio**. Expect turbulence. Trust the protocol. Leave no endpoint unconfigured. 🎯
 
@@ -37,7 +37,7 @@ There are a couple of steps that you need to do for both:
 1. [Download](https://download-directory.github.io/?url=https://github.com/laskewitz/agent-academy/tree/special-ops-mcsmcp/docs/special-ops/mcs-mcp/source&filename=jokes-mcp-server) the Jokes MCP Server
 1. Unpack the zip-file
 1. Open Visual Studio Code and open the unpacked folder
-1. Open the terminal and navigate to the unpacked folder
+1. Open the terminal in Visual Studio Code by pressing `ctrl` + `` ` `` (Windows/Linux) or `cmd` + `` ` `` (Mac)
 
 ### 🏃‍♀️ Run the MCP Server Locally
 

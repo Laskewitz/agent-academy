@@ -4,4 +4,7 @@ lastUpdated: false
 
 # Special Ops
 
-Our special ops missions will be added here soon!
+- Microsoft Copilot Studio ❤️ MCP ([lab](./mcs-mcp/index.md))
+- Power Platform CLI MCP ([lab](./pac-cli-mcp/index.md))
+
+More Special Ops missions will be added here soon!
