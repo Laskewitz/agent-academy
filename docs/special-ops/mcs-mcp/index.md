@@ -35,8 +35,11 @@ Now you have a choice! You either run the server locally - or you can deploy it 
 There are a couple of steps that you need to do for both:
 
 1. [Download](https://download-directory.github.io/?url=https://github.com/laskewitz/agent-academy/tree/special-ops-mcsmcp/docs/special-ops/mcs-mcp/source&filename=jokes-mcp-server) the Jokes MCP Server
+
 1. Unpack the zip-file
+
 1. Open Visual Studio Code and open the unpacked folder
+
 1. Open the terminal in Visual Studio Code by pressing `ctrl` + `` ` `` (Windows/Linux) or `cmd` + `` ` `` (Mac)
 
 ### 🏃‍♀️ Run the MCP Server Locally
@@ -64,8 +67,11 @@ There are a couple of steps that you need to do for both:
     ![Image of VS Code where the PORTS tab is open and the green `Forward a Port` button is highlighted](./assets/vscode-terminal-ports-forward.png)
 
 1. Enter `3000` as the port number (this should be the same as the port number you see when you ran the command in step 5). You might be prompted to sign in to GitHub, if so please do this, since this is required to use the port forwarding feature.
+
 1. Right click on the row you just added and select `Port visibility` > `Public` to make the server publicly available
+
 1. Ctrl + click on the `Forwarded address`, which should be something like: `https://something-3000.something.devtunnels.ms`
+
 1. Select `Copy` on the following pop-up to copy the URL
 
     ![View of the PORTS setup with highlighted the port, the forwarded address and the visibility](./assets/vscode-terminal-ports-setup.png)
@@ -115,18 +121,26 @@ You should again see the following error:
 To use the Jokes MCP Server, you need to use the URL of your server (can be either your devtunnel URL or your deployed Azure Container App) with the `/mcp` part at the end and add it as an MCP Server in Visual Studio Code.
 
 1. Press either `ctrl` + `shift` + `P` (Windows/Linux) or `cmd` + `shift` + `P` (Mac) and type `MCP`
+
 1. Select `MCP: Add Server...`
+
 1. Select `HTTP (HTTP or Server-Sent Events)`
+
 1. Paste the URL of your server in the input box (make sure `/mcp` in the end is included)
+
 1. Press `Enter`
+
 1. Enter a name for the server, for instance `JokesMCP`
+
 1. Select `User Settings` to save the MCP Server settings in your user settings
 
     This will add an MCP Server to your `settings.json` file. It should look like this:
     ![settings.json file](./assets/settings.png)
 
 1. Open `GitHub Copilot`
+
 1. Switch from `Ask` to `Agent`
+
 1. Make sure the `JokesMCP` server actions are selected when you select the tools icon:
 
     ![Tools menu in GitHub Copilot](./assets/tools-menu.png)
@@ -145,47 +159,38 @@ Now you have added the `JokesMCP` server to Visual Studio Code!
 
 ## 👨‍💻 Use the Jokes MCP Server in Microsoft Copilot Studio
 
-**Import the Connector**
+To use the Jokes MCP Server in Microsoft Copilot Studio, you need to create an agent and then add it as an MCP server.
 
-1. Go to https://make.preview.powerapps.com/customconnectors (make sure you’re in the correct environment) and click **+ New custom connector**.
-1. Select `Import from GitHub`
-1. Select `Custom` as **Connector Type**
-1. Select `dev` as the **Branch**
-1. Select `MCP-Streamable-HTTP` as the **Connector**
-1. Select `Continue`
+### Create an agent and add the MCP server as a tool
 
-    ![View of the import from GitHub section](./assets/import-from-github.png)
+1. Go to [Copilot Studio](https://copilotstudio.microsoft.com/)
 
-1. Change the **Connector Name** to something appropriate, like for instance `Jokes MCP`
-1. Change the **Description** to something appropriate
-1. Paste your root URL (for instance `something-3000.something.devtunnels.ms` or `something.azurecontainerapps.io`) in the **Host** field
-1. Select **Create connector**
-
-    > [!WARNING]  
-    > You may see a warning and an error upon creation – it should be resolved soon - but you can ignore it for now.
-
-1. Close the connector
-
-**Create an agent and add the MCP server as a tool**
-
-1. Go to https://copilotstudio.preview.microsoft.com/
 1. Select the environment picker at the top right corner
-1. Select the right environment (the environment with the `Get new features early` toggle switched on)
-1. Select `Create` in the left navigation
-1. Select the blue `New agent` button
+
+1. Select `Agents` in the left navigation
+
+1. Select the `Create blank agent` button
 
     ![New agent](./assets/newagent.png)
 
-1. Select the `Configure` tab on the left
+    > [!NOTE]
+    > This will start creating your agent, usually within 10 seconds your agent will be visible, but it will take around a minute until everything is provisioned. You will see a green bar at the top with the message `Your agent has been provisioned.` when your agent is provisioned.
 
-    ![Configure](./assets/configure.png)
+1. When it's done provisioning, select **Edit** in the details card on the overview page
+
+    ![Edit name](./assets/editname.png)
 
 1. Change the name to `Jokester`
+
 1. Add the following `Description`
 
     ```text
     A humor-focused agent that delivers concise, engaging jokes only upon user request, adapting its style to match the user's tone and preferences. It remains in character, avoids repetition, and filters out offensive content to ensure a consistently appropriate and witty experience.
     ```
+
+1. Select **Save** to save the changes
+
+1. Select **Edit** in the instructions card on the overview page
 
 1. Add the following `Instructions`
 
@@ -203,47 +208,62 @@ Now you have added the `JokesMCP` server to Visual Studio Code!
     * Be responsive, witty, and quick.
     ```
 
-1. Select `Continue` on the top right
+1. Select **Save** to save the instructions
 
-    ![Click continue to create agent](./assets/continue.png)
-
-1. Enable Generative AI `Orchestration`
-
-    ![Turn on orchestration](./assets/turnonorchestration.png)
-
-1. Disable general knowledge in the `Knowledge` section
-
-    ![Turn off general knowledge](./assets/turnoffgeneralknowledge.png)
-
-1. Select `Tools` in the top menu
+1. Select **Tools** in the top menu
 
     ![Tools](./assets/tools.png)
 
-1. Select `Add a tool`
+1. Select the blue **Add a tool** button
 
-    ![Add a tool](./assets/addatool.png)
+1. Select the **Model Context Protocol** button under `Create new` text
 
-1. Select the `Model Context Protocol` tab to filter all the Model Context Protocol Servers (see number 1 in the screenshot below)
+    ![Create MCP](./assets/create-mcp.png)
 
-1. Select the `Jokes MCP` server (see number 2 in the screenshot below)
+1. Enter the name:
 
-    ![MCP](./assets/mcpsteps.png)
+    ```text
+    Jokes MCP Server
+    ```
 
-1. Create a new connection by selecting the `Not connected` and **Create new Connection**
+1. Enter the description:
 
-    ![Action and connection](./assets/create-connection-action.png)
+    ```text
+    MCP server that fetches Chuck Norris and dad jokes on demand.
+    ```
 
-1. Select `Create`
+1. Enter the URL of the devtunnel. This should be something like `https://something-3000.something.devtunnels.ms/mcp` or the URL of your deployed MCP server in Azure
+
+1. Select **Create** to create the MCP Server
+
+    ![Creating MCP Server](./assets/create-mcp.png)
+
+    This will take a couple of seconds, because Copilot Studio is now creating a connector behind the scenes.
+
+1. Select **Not connected** (1) and **Create new Connection** (2)
+
+    ![Action and connection](./assets/create-connection-mcp-create.png)
+
+1. Select **Create**
 
     ![Create connection](./assets/create-connection-action-create.png)
 
-1. Select `Add to agent` to add the tool to the agent
+1. Select **Add and configure** to add the tool to the agent
 
     ![Add tool to agent](./assets/add-tool-to-agent.png)
 
-1. Select the `refresh icon` in the `Test your agent` pane
+    > [!TIP]
+    > This will add your MCP server to the agent. On the page that appears after selecting **Add and configure**, you are able to see the tools in the MCP server inside of Copilot Studio.
+    >
+    > ![MCP Server Tools](./assets/mcp-server-tools.png)
 
-    ![Refresh testing pane](./assets/refreshtestingpane.png)
+1. Select the **+ icon** in the `Test your agent` pane to start a new testing session
+
+    ![Refresh testing pane](./assets/start-new-testing-session.png)
+
+1. Expand the testing pane by selecting **the icon with the arrow**
+
+    ![Expand test pane](./assets/expand-test-pane.png)
 
 1. In the `Test your agent` pane send the following message:
 
@@ -251,33 +271,33 @@ Now you have added the `JokesMCP` server to Visual Studio Code!
     Can I get a Chuck Norris joke?
     ```
   
-    This will show you message that additional permissions are required to run this action. This is because of the user authentication in the action wizard.
+    This will show you a message that you need to connect first.
 
-1. Select `Connect`
+1. Select **Open connection manager**
 
-    ![Additional permissions](./assets/additionalpermissions.png)
+    ![Additional permissions](./assets/connection-prompt.png)
   
     This will open a new window where you can manage your connections for this agent.
 
-1. Select `Connect` next to the `JokesMCP`
+1. Select **Connect** next to the `Jokes MCP Server`
 
-    ![Connect to JokesMCP](./assets/connect.png)
+    ![Connect to JokesMCP](./assets/mcp-server-connect.png)
 
 1. Wait until the connection is created and select `Submit`
 
-    ![Pick a connection](./assets/submitconnection.png)
+    ![Pick a connection](./assets/mcp-server-connect-submit.png)
 
 1. The connection should now be connected, so the status should be set to `Connected`
 
-    ![Status connected](./assets/connected.png)
+    ![Status connected](./assets/mcp-server-connected.png)
 
 1. Close the manage your connections tab in your browser
 
     Now you should be back in the Jokester agent screen.
 
-1. Select the `refresh icon` in the `Test your agent` pane
+1. Select the **+ icon** in the `Test your agent` pane to start a new testing session
 
-    ![Refresh testing pane](./assets/refreshtestingpane.png)
+    ![Refresh testing pane](./assets/start-new-testing-session.png)
 
 1. In the `Test your agent` pane send the following message:
 
@@ -285,7 +305,7 @@ Now you have added the `JokesMCP` server to Visual Studio Code!
     Can I get a Chuck Norris joke?
     ```
 
-    This will now show a Chuck Norris joke - instead of the additional permissions. If that's not the case - you probably have missed the [prerequisite](#️-prerequisites) that the environment needs to have the `get new features early` toggle on.
+    This will now show a Chuck Norris joke - instead of the additional permissions. Also notice that you can easily see which tool has been triggered (get-chuck-joke) and what the output was the agent received.
 
     ![Chuck Norris joke](./assets/chucknorrisjoke.png)
 
@@ -303,7 +323,7 @@ And that was the Jokes MCP Server working in Microsoft Copilot Studio.
 
 ## ❌ Remove the Azure resources
 
-To remove the Azure resources after finishing the lab, run the following command in the terminal:
+If you have deployed the MCP server to Azure, don't forget to remove the Azure resources. To remove the Azure resources after finishing the lab, run the following command in the terminal:
 
 ```bash
 azd down
