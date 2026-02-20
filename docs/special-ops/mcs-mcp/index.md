@@ -161,10 +161,10 @@ Now you have added the `JokesMCP` server to Visual Studio Code!
 1. Paste your root URL (for instance `something-3000.something.devtunnels.ms` or `something.azurecontainerapps.io`) in the **Host** field
 1. Select **Create connector**
 
-> [!WARNING]  
-> You may see a warning and an error upon creation – it should be resolved soon - but you can ignore it for now.
+    > [!WARNING]  
+    > You may see a warning and an error upon creation – it should be resolved soon - but you can ignore it for now.
 
-11. Close the connector
+1. Close the connector
 
 **Create an agent and add the MCP server as a tool**
 

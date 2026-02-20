@@ -69,7 +69,7 @@ Your tenant shows a **development-focused organization** with:
 |---------|---------|-------------|------------|
 | `enableDesktopFlowDataPolicyManagement` | `false` | `true` | **Low** |
 | `disableBillingPolicyCreationByNonAdminUsers` | `false` | `true` | **Low** |
-| `enableDeleteDisabledUserinAllEnvironments` | `false` | `true` | **Low** |
+| `enableDeleteDisabledUserInAllEnvironments` | `false` | `true` | **Low** |
 
 ### 🟢 **LOW Priority** (Implement within 3-6 months)
 
@@ -172,7 +172,7 @@ pac admin update-tenant-settings --setting-name "powerPlatform.governance.policy
 pac admin update-tenant-settings --setting-name "powerPlatform.licensing.disableBillingPolicyCreationByNonAdminUsers" --setting-value "true"
 
 # Enable delete disabled users in all environments
-pac admin update-tenant-settings --setting-name "powerPlatform.userManagementSettings.enableDeleteDisabledUserinAllEnvironments" --setting-value "true"
+pac admin update-tenant-settings --setting-name "powerPlatform.userManagementSettings.enableDeleteDisabledUserInAllEnvironments" --setting-value "true"
 ```
 
 ### **Verification Commands**
