@@ -180,7 +180,11 @@ To use the Jokes MCP Server in Microsoft Copilot Studio, you need to create an a
 
     ![Edit name](./assets/editname.png)
 
-1. Change the name to `Jokester`
+1. Change the name to:
+
+    ```text
+    Jokester
+    ```
 
 1. Add the following **Description**
 
