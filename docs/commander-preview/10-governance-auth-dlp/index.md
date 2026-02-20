@@ -3,7 +3,7 @@ prev:
   text: 'Handoff to Human Agents'
   link: '/commander-preview/09-handoff-to-human'
 next:
-  text: 'Test, Monitor & Debug'
+  text: 'Test, Monitor, Debug & Analytics'
   link: '/commander-preview/11-test-monitor-debug'
 ---
 
