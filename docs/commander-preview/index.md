@@ -42,7 +42,7 @@ This academy is structured as a progressive series of advanced operations. Each 
 | `07` | 🧠 [Extend with Azure AI & BYOM](./07-azure-ai-byom/index.md) | Integrate Azure AI Search, Azure AI Foundry, and bring your own models |
 | `08` | 📚 [Knowledge Deep Dive](./08-knowledge-deep-dive/index.md) | Optimize knowledge sources, connect SharePoint, and understand security |
 | `09` | 🔄 [Handoff to Human Agents](./09-handoff-to-human/index.md) | Configure escalation to live agents with context transfer across supported engagement hubs |
-| `10` | 🔐 [Governance with Auth, Channels & DLP](./10-governance-auth-dlp/index.md) | Secure agent access with SSO, authentication, and DLP policies |
+| `10` | 🔐 [Governance Essentials with Authentication, Channels & DLP](./10-governance-auth-dlp/index.md) | Secure agent access with SSO, authentication, and DLP policies |
 | `11` | 🧪 [Test, Monitor, Debug & Analytics](./11-test-monitor-debug/index.md) | Test panel, activity maps, conversation snapshots, automated agent evaluations, Analytics dashboards, custom telemetry, and Power BI reporting |
 | `12` | 🚀 [Deploy Agents with Solutions & Pipelines](./12-deploy-solutions-pipelines/index.md) | Environment strategies, solutions, component collections, connections, sharing controls, and Pipelines |
 | `13` | 🏁 [Next Steps and Best Practices](./13-next-steps-best-practices/index.md) | Apply implementation guides, Power CAT tools, and the Well-Architected Framework |
