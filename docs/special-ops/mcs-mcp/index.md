@@ -23,27 +23,10 @@ So, MCP and connectors are really **better together**.
 
 - Visual Studio Code installed ([link](https://code.visualstudio.com/download))
 - Node v22 (ideally installed via [nvm for Windows](https://github.com/coreybutler/nvm-windows) or [nvm](https://github.com/nvm-sh/nvm))
-- Git installed ([link](https://git-scm.com/downloads))
 - Docker installed ([link](http://aka.ms/azure-dev/docker-install))
 - Azure Developer CLI installed ([link](https://learn.microsoft.com/azure/developer/azure-developer-cli/install-azd))
 - Azure Subscription (with payment method added)
-- GitHub account
 - Copilot Studio trial or developer account
-
-## ➕ Create a new GitHub repository based on the template
-
-1. Select `Use this template`
-1. Select `Create a new repository`
-
-    ![](./assets/usetemplate.png)
-
-1. Select the right `Owner` (it might already be selected when you have only one owner to choose from)
-1. Give it a `Repository name`
-1. Optionally you can give it a `Description`
-1. Select `Private`
-1. Select `Create repository`
-
-    This will take a little while. After it's done, you will be directed to the newly created repository.
 
 ## ⚖️ Choice: Run the server locally or deploy to Azure
 
@@ -51,12 +34,10 @@ Now you have a choice! You either run the server locally - or you can deploy it 
 
 There are a couple of steps that you need to do for both:
 
-1. Clone this repository by running the following command (replace `{account}` by your own GitHub account name): 
-
-    `git clone https://github.com/{account}/mcsmcp.git`
-
-1. Open Visual Studio Code and open the cloned folder
-1. Open the terminal and navigate to the cloned folder
+1. [Download](https://download-directory.github.io/?url=https://github.com/Laskewitz/agent-academy/tree/special-ops-mcsmcp/docs/special-ops/mcs-mcp/source&filename=jokes-mcp-server) the Jokes MCP Server
+1. Unpack the zip-file
+1. Open Visual Studio Code and open the unpacked folder
+1. Open the terminal and navigate to the unpacked folder
 
 ### 🏃‍♀️ Run the MCP Server Locally
 
