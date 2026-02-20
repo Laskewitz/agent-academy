@@ -21,10 +21,10 @@ So, MCP and connectors are really **better together**.
 
 ## ⚙️ Prerequisites
 
-- Visual Studio Code installed ([link](https://code.visualstudio.com/download))
+- Visual Studio Code installed ([download](https://code.visualstudio.com/download))
 - Node v22 (ideally installed via [nvm for Windows](https://github.com/coreybutler/nvm-windows) or [nvm](https://github.com/nvm-sh/nvm))
-- Docker installed ([link](http://aka.ms/azure-dev/docker-install))
-- Azure Developer CLI installed ([link](https://learn.microsoft.com/azure/developer/azure-developer-cli/install-azd))
+- Docker installed ([download](http://aka.ms/azure-dev/docker-install))
+- Azure Developer CLI installed ([download](https://learn.microsoft.com/azure/developer/azure-developer-cli/install-azd))
 - Azure Subscription (with payment method added)
 - Copilot Studio trial or developer account
 
@@ -34,15 +34,24 @@ Now you have a choice! You either run the server locally - or you can deploy it 
 
 There are a couple of steps that you need to do for both:
 
-1. [Download](https://download-directory.github.io/?url=https://github.com/Laskewitz/agent-academy/tree/special-ops-mcsmcp/docs/special-ops/mcs-mcp/source&filename=jokes-mcp-server) the Jokes MCP Server
+1. [Download](https://download-directory.github.io/?url=https://github.com/laskewitz/agent-academy/tree/special-ops-mcsmcp/docs/special-ops/mcs-mcp/source&filename=jokes-mcp-server) the Jokes MCP Server
 1. Unpack the zip-file
 1. Open Visual Studio Code and open the unpacked folder
 1. Open the terminal and navigate to the unpacked folder
 
 ### 🏃‍♀️ Run the MCP Server Locally
 
-1. Run `npm install`
-1. Run `npm run build && npm run start`
+1. Run the following command to install the dependencies:
+
+    ```bash
+    npm install
+    ```
+
+1. Run the following command to build and start the server:
+
+    ```bash
+    npm run build && npm run start
+    ```
 
     ![Terminal view after building and starting the server](./assets/vscode-terminal-run-start.png)
 
@@ -59,7 +68,7 @@ There are a couple of steps that you need to do for both:
 1. Ctrl + click on the `Forwarded address`, which should be something like: `https://something-3000.something.devtunnels.ms`
 1. Select `Copy` on the following pop-up to copy the URL
 
-    ![View of the PORTS setup with highlighted the port, the forwarded address and the visibility](./assets/vscode-terminal-ports-setup.png) 
+    ![View of the PORTS setup with highlighted the port, the forwarded address and the visibility](./assets/vscode-terminal-ports-setup.png)
 
 1. Open to the browser of your choice and paste the URL in the address bar, type `/mcp` behind it and hit enter
 
@@ -74,20 +83,20 @@ Don't worry - this error message is nothing to be worried about!
 ### 🌎 Deploy to Azure
 
 > [!IMPORTANT]
-> As listed in the [prerequisites](#️-prerequisites), the [Azure Developer CLI ](https://learn.microsoft.com/azure/developer/azure-developer-cli/install-azd) needs to be installed on your machine for this part.
+> As listed in the [prerequisites](#️-prerequisites), the [Azure Developer CLI](https://learn.microsoft.com/azure/developer/azure-developer-cli/install-azd) needs to be installed on your machine for this part.
 
 Make sure to login to Azure Developer CLI if you haven't done that yet.
 
-```azurecli
+```bash
 azd auth login
 ```
 
 > [!WARNING]  
-> After running `azd up`, you will have an MCP Server running on Azure that is publicly available. Ideally, you don't want that. Make sure to run `azd down` after finishing the lab to delete all the resources from your Azure subscription. Learn how to run `azd down` by going to [this section](#-remove-the-azure-resources). 
+> After running `azd up`, you will have an MCP Server running on Azure that is publicly available. Ideally, you don't want that. Make sure to run `azd down` after finishing the lab to delete all the resources from your Azure subscription. Learn how to run `azd down` by going to [this section](#-remove-the-azure-resources).
 
 Run the following command in the terminal:
 
-```azurecli
+```bash
 azd up
 ```
 
@@ -296,7 +305,7 @@ And that was the Jokes MCP Server working in Microsoft Copilot Studio.
 
 To remove the Azure resources after finishing the lab, run the following command in the terminal:
 
-```azurecli
+```bash
 azd down
 ```
 
