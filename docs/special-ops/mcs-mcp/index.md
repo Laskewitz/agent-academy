@@ -58,21 +58,21 @@ There are a couple of steps that you need to do for both:
 
     ![Terminal view after building and starting the server](./assets/vscode-terminal-run-start.png)
 
-1. Select `PORTS` at the top of the Visual Studio Code Terminal
+1. Select **PORTS** at the top of the Visual Studio Code Terminal
 
     ![Image of VS Code where the terminal is open and the PORTS tab is highlighted](./assets/vscode-terminal-ports.png)
 
-1. Select the green `Forward a Port` button
+1. Select the green **Forward a Port** button
 
     ![Image of VS Code where the PORTS tab is open and the green `Forward a Port` button is highlighted](./assets/vscode-terminal-ports-forward.png)
 
 1. Enter `3000` as the port number (this should be the same as the port number you see when you ran the command in step 5). You might be prompted to sign in to GitHub, if so please do this, since this is required to use the port forwarding feature.
 
-1. Right click on the row you just added and select `Port visibility` > `Public` to make the server publicly available
+1. Right click on the row you just added and select **Port visibility** > **Public** to make the server publicly available
 
-1. Ctrl + click on the `Forwarded address`, which should be something like: `https://something-3000.something.devtunnels.ms`
+1. Ctrl + click on the **Forwarded address**, which should be something like: `https://something-3000.something.devtunnels.ms`
 
-1. Select `Copy` on the following pop-up to copy the URL
+1. Select **Copy** on the following pop-up to copy the URL
 
     ![View of the PORTS setup with highlighted the port, the forwarded address and the visibility](./assets/vscode-terminal-ports-setup.png)
 
@@ -122,9 +122,9 @@ To use the Jokes MCP Server, you need to use the URL of your server (can be eith
 
 1. Press either `ctrl` + `shift` + `P` (Windows/Linux) or `cmd` + `shift` + `P` (Mac) and type `MCP`
 
-1. Select `MCP: Add Server...`
+1. Select **MCP: Add Server...**
 
-1. Select `HTTP (HTTP or Server-Sent Events)`
+1. Select **HTTP (HTTP or Server-Sent Events)**
 
 1. Paste the URL of your server in the input box (make sure `/mcp` in the end is included)
 
@@ -132,16 +132,16 @@ To use the Jokes MCP Server, you need to use the URL of your server (can be eith
 
 1. Enter a name for the server, for instance `JokesMCP`
 
-1. Select `User Settings` to save the MCP Server settings in your user settings
+1. Select **User Settings** to save the MCP Server settings in your user settings
 
     This will add an MCP Server to your `settings.json` file. It should look like this:
     ![settings.json file](./assets/settings.png)
 
-1. Open `GitHub Copilot`
+1. Open **GitHub Copilot**
 
-1. Switch from `Ask` to `Agent`
+1. Switch from **Ask** to **Agent**
 
-1. Make sure the `JokesMCP` server actions are selected when you select the tools icon:
+1. Make sure the **JokesMCP** server actions are selected when you select the tools icon:
 
     ![Tools menu in GitHub Copilot](./assets/tools-menu.png)
 
@@ -167,9 +167,9 @@ To use the Jokes MCP Server in Microsoft Copilot Studio, you need to create an a
 
 1. Select the environment picker at the top right corner
 
-1. Select `Agents` in the left navigation
+1. Select **Agents** in the left navigation
 
-1. Select the `Create blank agent` button
+1. Select the **Create blank agent** button
 
     ![New agent](./assets/newagent.png)
 
@@ -182,7 +182,7 @@ To use the Jokes MCP Server in Microsoft Copilot Studio, you need to create an a
 
 1. Change the name to `Jokester`
 
-1. Add the following `Description`
+1. Add the following **Description**
 
     ```text
     A humor-focused agent that delivers concise, engaging jokes only upon user request, adapting its style to match the user's tone and preferences. It remains in character, avoids repetition, and filters out offensive content to ensure a consistently appropriate and witty experience.
@@ -192,7 +192,7 @@ To use the Jokes MCP Server in Microsoft Copilot Studio, you need to create an a
 
 1. Select **Edit** in the instructions card on the overview page
 
-1. Add the following `Instructions`
+1. Add the following **Instructions**
 
     ```text
     You are a joke-telling assistant. Your sole purpose is to deliver appropriate, clever, and engaging jokes upon request. Follow these rules:
@@ -216,7 +216,7 @@ To use the Jokes MCP Server in Microsoft Copilot Studio, you need to create an a
 
 1. Select the blue **Add a tool** button
 
-1. Select the **Model Context Protocol** button under `Create new` text
+1. Select the **Model Context Protocol** button under **Create new** text
 
     ![Create MCP](./assets/create-mcp.png)
 
@@ -257,7 +257,7 @@ To use the Jokes MCP Server in Microsoft Copilot Studio, you need to create an a
     >
     > ![MCP Server Tools](./assets/mcp-server-tools.png)
 
-1. Select the **+ icon** in the `Test your agent` pane to start a new testing session
+1. Select the **+ icon** in the **Test your agent** pane to start a new testing session
 
     ![Refresh testing pane](./assets/start-new-testing-session.png)
 
@@ -265,7 +265,7 @@ To use the Jokes MCP Server in Microsoft Copilot Studio, you need to create an a
 
     ![Expand test pane](./assets/expand-test-pane.png)
 
-1. In the `Test your agent` pane send the following message:
+1. In the **Test your agent** pane send the following message:
 
     ```text
     Can I get a Chuck Norris joke?
@@ -279,15 +279,15 @@ To use the Jokes MCP Server in Microsoft Copilot Studio, you need to create an a
   
     This will open a new window where you can manage your connections for this agent.
 
-1. Select **Connect** next to the `Jokes MCP Server`
+1. Select **Connect** next to the **Jokes MCP Server**
 
     ![Connect to JokesMCP](./assets/mcp-server-connect.png)
 
-1. Wait until the connection is created and select `Submit`
+1. Wait until the connection is created and select **Submit**
 
     ![Pick a connection](./assets/mcp-server-connect-submit.png)
 
-1. The connection should now be connected, so the status should be set to `Connected`
+1. The connection should now be connected, so the status should be set to **Connected**
 
     ![Status connected](./assets/mcp-server-connected.png)
 
@@ -295,11 +295,11 @@ To use the Jokes MCP Server in Microsoft Copilot Studio, you need to create an a
 
     Now you should be back in the Jokester agent screen.
 
-1. Select the **+ icon** in the `Test your agent` pane to start a new testing session
+1. Select the **+ icon** in the **Test your agent** pane to start a new testing session
 
     ![Refresh testing pane](./assets/start-new-testing-session.png)
 
-1. In the `Test your agent` pane send the following message:
+1. In the **Test your agent** pane send the following message:
 
     ```text
     Can I get a Chuck Norris joke?
@@ -309,7 +309,7 @@ To use the Jokes MCP Server in Microsoft Copilot Studio, you need to create an a
 
     ![Chuck Norris joke](./assets/chucknorrisjoke.png)
 
-1. In the `Test your agent` pane send the following message:
+1. In the **Test your agent** pane send the following message:
 
     ```text
     Can I get a Dad joke?
