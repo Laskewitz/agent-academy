@@ -5,7 +5,7 @@ export default defineConfig({
   title: "Agent Academy",
   base: "/agent-academy/",
   head: [
-    ["link", { rel: "icon", href: "/logo.png" }],
+    ["link", { rel: "icon", href: "logo.png" }],
     [
       "script",
       { text: "text/javascript" },
