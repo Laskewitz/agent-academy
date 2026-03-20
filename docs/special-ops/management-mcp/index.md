@@ -13,7 +13,7 @@ difficulty: 3
 
 > **Difficulty**: ⭐⭐⭐ | **Time**: ~45 min | **Type**: Special Ops
 
-Welcome, agent. Your mission — should you choose to accept it — is **Operation Forge Master**: connect to the **Microsoft MCP Management Server** from Visual Studio Code and forge a custom MCP server — without writing a single line of code. You'll wire up a remote API, add tools, publish your server, and put it to work inside a Copilot Studio agent. 🔨
+Welcome, agent. Your mission — should you choose to accept it — is **Operation Tool Smith**: connect to the **Microsoft MCP Management Server** from Visual Studio Code and craft a custom MCP server — without writing a single line of code. You'll wire up a remote API, add tools, publish your server, and put it to work inside a Copilot Studio agent. 🔨
 
 ## ❓ What Is the MCP Management Server?
 
@@ -295,7 +295,7 @@ If you want to remove the server after testing:
 <!-- markdownlint-disable-next-line MD033 -->
 <p align="center"><img src="./assets/badge.png" alt="MCP Management Server Badge" width="220" /></p>
 
-Congrats, agent — **Operation Forge Master** is complete! You've forged a custom MCP server from the ground up using nothing but tool calls. Here's what you've mastered:
+Congrats, agent — **Operation Tool Smith** is complete! You've crafted a custom MCP server from the ground up using nothing but tool calls. Here's what you've mastered:
 
 ✅ **MCP Management Server connection**: Connected to the Management Server from Visual Studio Code and authenticated with your Microsoft account
 
