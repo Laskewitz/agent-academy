@@ -1,0 +1,10 @@
+version: 1
+instructions: |
+  This repository is a VitePress docs site for Agent Academy.
+  Use the project scripts to run the site locally.
+  The local docs server is started with `npm run docs:dev`.
+scripts:
+  - name: Start local website
+    command: npm install && npm run docs:dev
+server_ready_pattern: '(?i)Local:\s+(https?://\S+)'
+auto_open_in_browser: false

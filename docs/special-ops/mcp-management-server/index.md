@@ -5,14 +5,15 @@ tags:
   - automation
 difficulty: 3
 time: 45
-harness: standard
+harness: github-copilot
 preview: true
 description: >-
   Build, publish, and consume a scenario-focused Microsoft Graph-backed MCP
-  server by using the Microsoft MCP Management Server.
+  server by using the Microsoft MCP Management Server with the GitHub Copilot harness.
 badge: ../assets/Server_Architect_Badge.png
 products:
   - copilot-studio
+  - github-copilot
   - visual-studio-code
   - microsoft-365
   - power-platform
@@ -27,12 +28,20 @@ last-edited-date: 2026-08-11
 
 <mission-meta />
 
-<!-- TODO: Add ../assets/Server_Architect_Badge.png before publication. -->
+<!-- markdownlint-disable-next-line MD033 -->
+<p align="center"><img src="../assets/Server_Architect_Badge.png" alt="Server Architect Badge" width="220" /></p>
 
 Welcome, agent. Your mission, should you choose to accept it, is to build a
 scenario-focused MCP server without writing or hosting server code. You will
 use the Microsoft MCP Management Server to assemble a small set of Microsoft
-Graph tools, publish the server, and connect it to a Copilot Studio agent.
+Graph tools, publish the server, and connect it to an agent powered by the
+GitHub Copilot harness in Microsoft Copilot Studio.
+
+> [!IMPORTANT] This mission uses the GitHub Copilot harness
+> The Copilot Studio steps require an agent powered by the **GitHub Copilot
+> harness**. Turn on **New Experience** before you create the agent. GitHub
+> Copilot in Visual Studio Code is also used separately to configure and test the
+> management server.
 
 Instead of giving your agent every tool in the catalog, you will forge one
 purpose-built server named `OnboardingBuddy`. It will expose only the profile,
@@ -40,9 +49,9 @@ calendar, and mail capabilities needed for a focused employee onboarding
 scenario.
 
 > [!IMPORTANT] Preview feature
-> The Microsoft MCP Management Server is a preview feature powered by the
-> **standard harness**. Preview tool names, parameters, availability, and user
-> interface labels can change. Do not use this mission to configure a
+> The Microsoft MCP Management Server is a preview feature for agents powered by
+> the **GitHub Copilot harness**. Preview tool names, parameters, availability,
+> and user interface labels can change. Do not use this mission to configure a
 > production environment.
 
 ## 🎯 Mission objectives {#mission-objectives}
@@ -53,7 +62,7 @@ In this mission, you will learn how to:
 - Create a scenario-focused MCP server in a Power Platform environment
 - Discover and add Microsoft Graph operations as MCP tools
 - Write tool descriptions that help an orchestrator choose the correct tool
-- Publish and connect a custom MCP server to a Copilot Studio agent
+- Publish and connect a custom MCP server to an agent powered by the GitHub Copilot harness
 - Review governance signals and remove the server after testing
 
 ## ⚙️ Prerequisites {#prerequisites}
@@ -67,7 +76,16 @@ Before you begin, make sure you have:
 - [Visual Studio Code](https://code.visualstudio.com/download) version 1.118 or later
 - Access to GitHub Copilot Chat in Visual Studio Code
 - Agent 365 and Work IQ MCP availability in your tenant and region
-- A Copilot Studio agent powered by the **standard harness**
+- A Copilot Studio trial or developer account with access to the **GitHub Copilot harness**
+
+> [!IMPORTANT] GitHub Copilot harness billing
+> This mission uses the **GitHub Copilot harness in Microsoft Copilot Studio**,
+> which uses usage-based billing. Building, testing in Preview, evaluating, and
+> using the agent might consume **Copilot Credits**. Review the
+> [Copilot Credits billing overview](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/billing-credit-overview)
+> before you begin.
+
+<!-- Keep adjacent callouts separate for markdownlint. -->
 
 > [!WARNING] Tenant administrator required for publishing
 > Only tenant administrators can currently publish custom MCP servers within a
@@ -367,12 +385,13 @@ clients. A tenant administrator must complete this lab.
 > action. Continue with the conceptual walkthrough, but do not expect the
 > server to appear in Copilot Studio.
 
-## 🧪 Lab 4.1 - Use the server in Copilot Studio {#lab-41-use-in-copilot-studio}
+## 🧪 Lab 4.1 - Use the server with the GitHub Copilot harness {#lab-41-use-in-copilot-studio}
 
-Connect the approved server to a standard-harness agent and test orchestration.
+Connect the approved server to an agent powered by the GitHub Copilot harness and test orchestration.
 
 1. Go to [Microsoft Copilot Studio](https://copilotstudio.microsoft.com).
-1. Open an existing standard-harness agent.
+1. Turn on **New Experience** if it is not already enabled.
+1. Open an existing agent powered by the **GitHub Copilot harness**.
 1. Select **Tools**.
 1. Select **MCP Server**.
 1. Select `OnboardingBuddy` from the registry.
